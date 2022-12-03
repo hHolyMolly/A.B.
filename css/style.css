@@ -295,47 +295,29 @@ body._lock-scroll {
 
 .header__wrapper {
   width: 100%;
-  /* Если меньше контейнера */
-  min-height: 100px;
+  min-height: 80px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 200;
   background-color: #ffffff;
 }
-@media (max-width: 1230px) {
-  .header__wrapper {
-    min-height: calc(80px + 20 * ((100vw - 320px) / 910));
-  }
-}
 .header__wrapper:before {
   content: "";
   width: 100%;
-  /* Если меньше контейнера */
-  min-height: 100px;
+  min-height: 80px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 110;
   background-color: #ffffff;
 }
-@media (max-width: 1230px) {
-  .header__wrapper:before {
-    min-height: calc(80px + 20 * ((100vw - 320px) / 910));
-  }
-}
 .header__body {
-  /* Если меньше контейнера */
-  min-height: 100px;
+  min-height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-}
-@media (max-width: 1230px) {
-  .header__body {
-    min-height: calc(80px + 20 * ((100vw - 320px) / 910));
-  }
 }
 @media (min-width: 768.2px) {
   .header__menu {
@@ -602,14 +584,14 @@ body._lock-scroll {
 
 .page {
   /* Если меньше контейнера */
-  padding-top: 140px;
+  padding-top: 120px;
   /* Если меньше контейнера */
   padding-bottom: 80px;
   flex: 1 1 auto;
 }
 @media (max-width: 1230px) {
   .page {
-    padding-top: calc(80px + 60 * ((100vw - 320px) / 910));
+    padding-top: calc(90px + 30 * ((100vw - 320px) / 910));
   }
 }
 @media (max-width: 1230px) {
