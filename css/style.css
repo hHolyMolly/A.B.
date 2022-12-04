@@ -295,29 +295,47 @@ body._lock-scroll {
 
 .header__wrapper {
   width: 100%;
-  min-height: 80px;
+  /* Если меньше контейнера */
+  min-height: 100px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 200;
   background-color: #ffffff;
 }
+@media (max-width: 1230px) {
+  .header__wrapper {
+    min-height: calc(80px + 20 * ((100vw - 320px) / 910));
+  }
+}
 .header__wrapper:before {
   content: "";
   width: 100%;
-  min-height: 80px;
+  /* Если меньше контейнера */
+  min-height: 100px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 110;
   background-color: #ffffff;
 }
+@media (max-width: 1230px) {
+  .header__wrapper:before {
+    min-height: calc(80px + 20 * ((100vw - 320px) / 910));
+  }
+}
 .header__body {
-  min-height: 80px;
+  /* Если меньше контейнера */
+  min-height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+}
+@media (max-width: 1230px) {
+  .header__body {
+    min-height: calc(80px + 20 * ((100vw - 320px) / 910));
+  }
 }
 @media (min-width: 768.2px) {
   .header__menu {
@@ -689,14 +707,14 @@ body._lock-scroll {
 
 .page {
   /* Если меньше контейнера */
-  padding-top: 120px;
+  padding-top: 160px;
   /* Если меньше контейнера */
   padding-bottom: 200px;
   flex: 1 1 auto;
 }
 @media (max-width: 1230px) {
   .page {
-    padding-top: calc(90px + 30 * ((100vw - 320px) / 910));
+    padding-top: calc(120px + 40 * ((100vw - 320px) / 910));
   }
 }
 @media (max-width: 1230px) {
@@ -706,20 +724,20 @@ body._lock-scroll {
 }
 .page__start:not(:last-child) {
   /* Если меньше контейнера */
-  margin-bottom: 140px;
+  margin-bottom: 200px;
 }
 @media (max-width: 1230px) {
   .page__start:not(:last-child) {
-    margin-bottom: calc(60px + 80 * ((100vw - 320px) / 910));
+    margin-bottom: calc(80px + 120 * ((100vw - 320px) / 910));
   }
 }
 .page__research:not(:last-child) {
   /* Если меньше контейнера */
-  margin-bottom: 140px;
+  margin-bottom: 200px;
 }
 @media (max-width: 1230px) {
   .page__research:not(:last-child) {
-    margin-bottom: calc(60px + 80 * ((100vw - 320px) / 910));
+    margin-bottom: calc(80px + 120 * ((100vw - 320px) / 910));
   }
 }
 
@@ -792,7 +810,7 @@ body._lock-scroll {
   /* Если меньше контейнера */
   font-size: 18px;
   line-height: 130%;
-  color: rgba(34, 34, 34, 0.8);
+  color: rgba(34, 34, 34, 0.7);
 }
 @media (max-width: 1230px) {
   .start__text {
@@ -907,11 +925,11 @@ body._lock-scroll {
 
 .research__header:not(:last-child) {
   /* Если меньше контейнера */
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 @media (max-width: 1230px) {
   .research__header:not(:last-child) {
-    margin-bottom: calc(30px + 20 * ((100vw - 320px) / 910));
+    margin-bottom: calc(60px + 20 * ((100vw - 320px) / 910));
   }
 }
 .research__title {
@@ -925,7 +943,7 @@ body._lock-scroll {
   /* Если меньше контейнера */
   font-size: 16px;
   line-height: 150%;
-  color: rgba(34, 34, 34, 0.8);
+  color: rgba(34, 34, 34, 0.7);
 }
 @media (max-width: 1230px) {
   .research__sub-title {
@@ -948,19 +966,19 @@ body._lock-scroll {
 }
 .research-columns__project:not(:last-child) {
   /* Если меньше контейнера */
-  padding-bottom: 50px;
+  padding-bottom: 60px;
   /* Если меньше контейнера */
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   border-bottom: 1px solid #dbdbdb;
 }
 @media (max-width: 1230px) {
   .research-columns__project:not(:last-child) {
-    padding-bottom: calc(20px + 30 * ((100vw - 320px) / 910));
+    padding-bottom: calc(40px + 20 * ((100vw - 320px) / 910));
   }
 }
 @media (max-width: 1230px) {
   .research-columns__project:not(:last-child) {
-    margin-bottom: calc(20px + 30 * ((100vw - 320px) / 910));
+    margin-bottom: calc(40px + 20 * ((100vw - 320px) / 910));
   }
 }
 @media (min-width: 480.2px) {
@@ -1005,7 +1023,7 @@ body._lock-scroll {
     justify-content: center;
   }
   .research-columns__images:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 }
 @media (min-width: 480.2px) {
@@ -1095,7 +1113,7 @@ body._lock-scroll {
 }
 @media (max-width: 1230px) {
   .research-columns-row__title:not(:last-child) {
-    margin-bottom: calc(10px + 30 * ((100vw - 320px) / 910));
+    margin-bottom: calc(20px + 20 * ((100vw - 320px) / 910));
   }
 }
 @media (max-width: 480.2px) {
@@ -1112,7 +1130,7 @@ body._lock-scroll {
   /* Если меньше контейнера */
   font-size: 16px;
   line-height: 150%;
-  color: rgba(34, 34, 34, 0.8);
+  color: rgba(34, 34, 34, 0.7);
 }
 @media (max-width: 1230px) {
   .research-columns-row__text {
@@ -1125,7 +1143,7 @@ body._lock-scroll {
 }
 @media (max-width: 1230px) {
   .research-columns-row__text:not(:last-child) {
-    margin-bottom: calc(10px + 30 * ((100vw - 320px) / 910));
+    margin-bottom: calc(30px + 10 * ((100vw - 320px) / 910));
   }
 }
 .about__title {
@@ -1137,7 +1155,7 @@ body._lock-scroll {
 }
 @media (max-width: 1230px) {
   .about__title:not(:last-child) {
-    margin-bottom: calc(20px + 40 * ((100vw - 320px) / 910));
+    margin-bottom: calc(30px + 30 * ((100vw - 320px) / 910));
   }
 }
 .about__columns {
