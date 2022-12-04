@@ -195,8 +195,8 @@ body.ie ._ibg img {
 }
 
 ._burger {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -204,7 +204,7 @@ body.ie ._ibg img {
   background-color: transparent;
 }
 ._burger span {
-  width: 25px;
+  width: 30px;
   height: 2px;
   position: relative;
   transition: background-color 0.2s ease-in-out 0s;
@@ -212,7 +212,7 @@ body.ie ._ibg img {
 }
 ._burger span:before, ._burger span:after {
   content: "";
-  width: 25px;
+  width: 30px;
   height: 2px;
   display: flex;
   justify-content: center;
@@ -341,20 +341,9 @@ body._lock-scroll {
   z-index: 120;
   transform: translate(-50%, -50%);
 }
-.header__logo {
-  display: block;
-  font-family: "Zen Dots";
-  /* Если меньше контейнера */
-  font-size: 46px;
-  color: #222222;
-}
-@media (max-width: 1230px) {
-  .header__logo {
-    font-size: calc(38px + 8 * ((100vw - 320px) / 910));
-  }
-}
-.header__logo span {
-  color: #205bad;
+.header__logo img {
+  width: 70px;
+  height: 70px;
 }
 .header__actions {
   display: flex;
@@ -388,7 +377,7 @@ body._lock-scroll {
 
 @media (max-width: 768.2px) {
   .header-menu__body {
-    padding: 90px 15px 20px;
+    padding: 100px 15px 30px;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -458,6 +447,122 @@ body._lock-scroll {
   }
   .header-menu__list-link:hover {
     color: #205bad;
+  }
+}
+
+.footer {
+  background-color: #F4F7FA;
+}
+.footer__body {
+  /* Если меньше контейнера */
+  padding-top: 60px;
+  /* Если меньше контейнера */
+  padding-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #dbdbdb;
+}
+@media (max-width: 1230px) {
+  .footer__body {
+    padding-top: calc(30px + 30 * ((100vw - 320px) / 910));
+  }
+}
+@media (max-width: 1230px) {
+  .footer__body {
+    padding-bottom: calc(20px + 40 * ((100vw - 320px) / 910));
+  }
+}
+@media (max-width: 552.2px) {
+  .footer__body {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+.footer__logo img {
+  width: 70px;
+  height: 70px;
+}
+@media (min-width: 552.2px) {
+  .footer__logo:not(:last-child) {
+    margin-right: 20pxpx;
+  }
+}
+@media (max-width: 552.2px) {
+  .footer__logo:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 552.2px) {
+  .footer__menu:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+@media (max-width: 552.2px) {
+  .footer__menu:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+.footer__icons {
+  display: flex;
+  align-items: center;
+}
+
+.footer-menu__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer-menu__list-item:not(:last-child) {
+  /* Если меньше контейнера */
+  margin-right: 40px;
+}
+@media (max-width: 1230px) {
+  .footer-menu__list-item:not(:last-child) {
+    margin-right: calc(20px + 20 * ((100vw - 320px) / 910));
+  }
+}
+.footer-menu__list-link {
+  font-weight: 500;
+  color: #222222;
+}
+@media (any-hover: hover) {
+  .footer-menu__list-link {
+    transition: color 0.2s ease 0s;
+  }
+  .footer-menu__list-link:hover {
+    color: #205bad;
+  }
+}
+
+.footer-icons__item {
+  /* Если меньше контейнера */
+  width: 34px;
+  /* Если меньше контейнера */
+  height: 34px;
+}
+@media (max-width: 1230px) {
+  .footer-icons__item {
+    width: calc(28px + 6 * ((100vw - 320px) / 910));
+  }
+}
+@media (max-width: 1230px) {
+  .footer-icons__item {
+    height: calc(28px + 6 * ((100vw - 320px) / 910));
+  }
+}
+.footer-icons__item path {
+  stroke: #222222;
+}
+.footer-icons__item:not(:last-child) {
+  margin-right: 20px;
+}
+@media (any-hover: hover) {
+  .footer-icons__item path {
+    transition: stroke 0.2s ease 0s;
+  }
+  .footer-icons__item:hover path {
+    stroke: #205bad;
   }
 }
 
@@ -586,7 +691,7 @@ body._lock-scroll {
   /* Если меньше контейнера */
   padding-top: 120px;
   /* Если меньше контейнера */
-  padding-bottom: 80px;
+  padding-bottom: 200px;
   flex: 1 1 auto;
 }
 @media (max-width: 1230px) {
@@ -596,7 +701,7 @@ body._lock-scroll {
 }
 @media (max-width: 1230px) {
   .page {
-    padding-bottom: calc(40px + 40 * ((100vw - 320px) / 910));
+    padding-bottom: calc(100px + 100 * ((100vw - 320px) / 910));
   }
 }
 .page__start:not(:last-child) {
@@ -682,9 +787,6 @@ body._lock-scroll {
   .start__title:not(:last-child) {
     margin-bottom: calc(20px + 20 * ((100vw - 320px) / 910));
   }
-}
-.start__title_page:not(:last-child) {
-  margin-bottom: 20px;
 }
 .start__text {
   /* Если меньше контейнера */
