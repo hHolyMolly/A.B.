@@ -740,6 +740,15 @@ body._lock-scroll {
     margin-bottom: calc(80px + 120 * ((100vw - 320px) / 910));
   }
 }
+.page__gallery:not(:last-child) {
+  /* Если меньше контейнера */
+  margin-bottom: 200px;
+}
+@media (max-width: 1230px) {
+  .page__gallery:not(:last-child) {
+    margin-bottom: calc(80px + 120 * ((100vw - 320px) / 910));
+  }
+}
 
 .start__body {
   display: flex;
@@ -1223,5 +1232,160 @@ body._lock-scroll {
 @media (max-width: 768.2px) and (min-width: 480.2px) {
   .about-columns__text {
     text-align: left;
+  }
+}
+
+.gallery__title {
+  text-align: center;
+}
+.gallery__title:not(:last-child) {
+  /* Если меньше контейнера */
+  margin-bottom: 80px;
+}
+@media (max-width: 1230px) {
+  .gallery__title:not(:last-child) {
+    margin-bottom: calc(40px + 40 * ((100vw - 320px) / 910));
+  }
+}
+.gallery__columns {
+  /* Если меньше контейнера */
+  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (max-width: 1230px) {
+  .gallery__columns {
+    gap: calc(15px + 15 * ((100vw - 320px) / 910));
+  }
+}
+@media (min-width: 480.2px) {
+  .gallery__columns {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 300px 300px;
+    grid-template-areas: "big little-1" "big little-2";
+  }
+}
+@media (max-width: 992.2px) and (min-width: 768.2px) {
+  .gallery__columns {
+    grid-template-rows: 220px 220px;
+  }
+}
+@media (max-width: 768.2px) and (min-width: 652.2px) {
+  .gallery__columns {
+    grid-template-rows: 190px 190px;
+  }
+}
+@media (max-width: 652.2px) and (min-width: 552.2px) {
+  .gallery__columns {
+    grid-template-rows: 150px 150px;
+  }
+}
+@media (max-width: 552.2px) and (min-width: 480.2px) {
+  .gallery__columns {
+    grid-template-rows: 140px 140px;
+  }
+}
+
+.gallery-columns__card {
+  position: relative;
+  overflow: hidden;
+}
+@media (any-hover: hover) {
+  .gallery-columns__card:hover .gallery-columns__image {
+    transform: scale(1.05);
+  }
+  .gallery-columns__card:hover .gallery-columns__image:before {
+    opacity: 1;
+  }
+  .gallery-columns__card:hover .gallery-columns__text {
+    opacity: 1;
+  }
+}
+@media (min-width: 480.2px) {
+  .gallery-columns__card_big {
+    grid-area: big;
+  }
+  .gallery-columns__card_big .gallery-columns__image {
+    padding-bottom: 140%;
+  }
+}
+@media (min-width: 480.2px) {
+  .gallery-columns__card_little .gallery-columns__image {
+    padding-bottom: 70%;
+  }
+  .gallery-columns__card_little:nth-child(1) {
+    grid-area: little-1;
+  }
+  .gallery-columns__card_little:nth-child(2) {
+    grid-area: little-2;
+  }
+}
+.gallery-columns__image:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0.2;
+  transition: opacity 0.3s ease 0s;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 480.2px) {
+  .gallery-columns__image {
+    padding-bottom: 80%;
+  }
+}
+@media (any-hover: hover) {
+  .gallery-columns__image {
+    transition: transform 0.3s ease 0s;
+  }
+}
+@media (any-hover: none) {
+  .gallery-columns__image:before {
+    opacity: 1;
+  }
+}
+.gallery-columns__text {
+  /* Если меньше контейнера */
+  padding: 20px;
+  max-width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 5;
+  opacity: 0;
+  transition: bottom 0.3s ease 0s, opacity 0.3s ease 0s;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Если меньше контейнера */
+  font-size: 22px;
+  line-height: 127.2727272727%;
+  color: #ffffff;
+}
+@media (max-width: 1230px) {
+  .gallery-columns__text {
+    padding: calc(10px + 10 * ((100vw - 320px) / 910));
+  }
+}
+@media (max-width: 1230px) {
+  .gallery-columns__text {
+    font-size: calc(12px + 10 * ((100vw - 320px) / 910));
+  }
+}
+@media (max-width: 480.2px) {
+  .gallery-columns__text {
+    padding: 20px;
+    /* Если меньше контейнера */
+    font-size: 22px;
+  }
+}
+@media (max-width: 480.2px) and (max-width: 1230px) {
+  .gallery-columns__text {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 910));
+  }
+}
+@media (any-hover: none) {
+  .gallery-columns__text {
+    opacity: 1;
   }
 }
